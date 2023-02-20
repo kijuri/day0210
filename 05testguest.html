@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="html5">
+  <meta name="author" content="kim young">
+  
+<title></title>
+   <style type="text/css">
+      * {
+         font-size: 14pt; 
+         font-weight: bold; 
+         font-family: Comic Sans MS ;
+        }
+        
+        #title_ch, #email_ch{ 
+            margin-left: 5px;
+            font-size:12pt; 
+            color:red
+         }
+
+        .input_group{
+            height: 30px;
+            margin-bottom: 5px;
+        }
+
+        .input_button1{
+            height: 40px;
+            margin-left: 60px;
+            border-radius: 10px;
+        }
+        
+        .input_button2{
+            height: 40px;
+            border-radius: 10px;
+        }
+       
+   </style>
+   
+   
+    
+ <script type="text/javascript">
+    var flag=false;  //전역변수
+ 
+    function check(){
+ 	  var a=myform.title.value; //제목데이터
+ 	  
+        if(a==""  ||  a==null){
+            document.getElementById("title_ch").innerHTML="*제목데이터를 입력하세요*";         
+            myform.title.focus(); 
+            return false;
+        }else{
+            document.getElementById("title_ch").innerHTML="";
+        }
+
+      var b=myform.email.value; //메일데이터
+        if(b=="" || b==null){
+            document.getElementById("email_ch").innerHTML="*메일데이터를 입력하세요*";
+            myform.emailfocus(); 
+            return false;
+        }else{ 
+            document.getElementById("email_ch").innerHTML="";
+            return false;
+        }
+    }//end
+ </script>
+</head>
+<body>
+    
+<div style="width:900px; margin-left: 10px" >
+
+  <h2> 05testguest.html </h2>  
+  <form name="myform">
+   	   제목:<input type=text name="title" class="input_group"> 
+   	       <span id="title_ch"></span> <br>
+   	     
+       메일:<input type=text name="email" id="email"   class="input_group"> 
+         <span id="email_ch"></span> <br>
+         
+   	  <input type="button"  onclick="check()" value="주문확인"  class="input_button1">
+   	  <input type="reset" value="입력취소" class="input_button2">
+  </form>
+ </div>
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
